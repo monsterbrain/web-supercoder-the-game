@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DEMO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			body {
+			  text-align: center;
+			  padding: 3rem;
+			}
+
+			h1, h2 {
+			  font-size: 2rem;
+			}
+
+			p {
+			  margin-bottom: 2rem;
+			  color: tomato;
+			}
+
+			button {
+			  padding: 0.75rem 2rem;
+			}
+
+		</style>
+    </head>
+    <body style="overflow: hidden;">
+        <section>
+			<h1>
+				Title made with HTML
+			</h1>
+			<hr>
+			<p>
+				And I am Subtitle.
+			</p>
+			<button>
+				Hide the text above
+			</button>
+			<br/>
+			<h2>Click</h2>
+        </section>
+
+        <script src="scripts/vendor/jquery.min.js"></script>
+		<script>
+			var clickFn = function (){
+				$('p').css('opacity', 0); 
+			};
+			$('button').click(clickFn);
+		</script>
+    </body>
+</html>
