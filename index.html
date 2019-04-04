@@ -13,13 +13,45 @@
         .cm-tag{
             color: #9effff;
         }
+
+        #img-preview-div{
+            display: inline-block;
+            border: 2px solid #888;
+            position: absolute;
+            z-index: 2;
+            /* opacity: 1; */
+            right: 10px;
+            top: 40px;
+
+            transition: all ease 200ms;
+            transform: scale(0.65);
+            transform-origin: right top;
+        }
+        #img-preview-div:hover{
+            transform: scale(1.0);
+        }
+
+        .error-code-line{
+            border-left: 4px solid #f44336;
+        }
+
+        .correct-code-line{
+            border-left: 4px solid #92ef27;
+        }
+
+
+        /* #img-preview-div>img{
+            transition: all ease 200ms;
+            transform: scale(50%);
+        } */
     </style>
 </head>
 
 <body>
-    <div style="text-align: center;">
-        <h2>Preview</h2>
-        <iframe src="preview.html" style="width: 50%; height: 326px;"></iframe>
+
+    <div id="img-preview-div">
+        <p style="text-align: end; margin-right: 16px;"><b>Target Html Page</b></p>
+        <img src="img/page1-preview.gif" alt="page1-preview">
     </div>
     <section class="kanban-demo">
 
