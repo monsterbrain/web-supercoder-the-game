@@ -123,6 +123,7 @@ function updateCorrectStatus(grid, gridId) {
     else if (gridId == cssGridId) {
         var currentItems = grid.getItems();
         var currentItemObjs = currentItems.map(function (item) {
+            $(item.getElement()).find('div').removeClass('correct-code-line').removeClass('error-code-line');
             return {
                 elem: item.getElement(),
                 id: item.getElement().getAttribute('data-id'),
@@ -130,8 +131,6 @@ function updateCorrectStatus(grid, gridId) {
                 parentid: item.getElement().getAttribute('data-parentid'),
             }
         });
-
-        $(currentItems).find('div').removeClass('correct-code-line').removeClass('error-code-line');
 
         var isAllCorrect = true;
 
@@ -188,8 +187,9 @@ function updateCorrectStatus(grid, gridId) {
     } else if(gridId == jsGridId){
         // get order array
         var currentItems = grid.getItems();
-        $(currentItems).find('div').removeClass('correct-code-line').removeClass('error-code-line');
+        
         var currentItemIds = currentItems.map(function (item) {
+            $(item.getElement()).find('div').removeClass('correct-code-line').removeClass('error-code-line');
             return parseInt(item.getElement().getAttribute('data-id'))
         });
 
